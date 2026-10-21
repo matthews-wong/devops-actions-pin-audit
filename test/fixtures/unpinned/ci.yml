@@ -1,0 +1,9 @@
+name: unpinned
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@main
+      - uses: docker://alpine:3.20
