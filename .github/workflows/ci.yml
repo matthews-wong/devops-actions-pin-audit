@@ -22,7 +22,11 @@ jobs:
           persist-credentials: false
       - name: Shellcheck
         run: shellcheck scripts/*.sh test/*.sh
-      - name: Test the audit
-        run: test/audit-pins.test.sh
+      - name: Test the audits
+        run: |
+          test/audit-pins.test.sh
+          test/audit-permissions.test.sh
       - name: Audit this repository's workflows
-        run: scripts/audit-pins.sh
+        run: |
+          scripts/audit-pins.sh
+          scripts/audit-permissions.sh
