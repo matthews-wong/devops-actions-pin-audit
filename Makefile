@@ -8,6 +8,8 @@ lint:
 
 test:
 	test/audit-pins.test.sh
+	test/audit-permissions.test.sh
 
 audit:
 	scripts/audit-pins.sh
+	scripts/audit-permissions.sh
